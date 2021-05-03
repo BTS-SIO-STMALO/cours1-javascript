@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cours JavaScript</title>
+        <meta charset="utf-8">
+        <meta name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=no">
+        <script>
+            document.addEventListener('DOMContentLoaded', function(){
+                let bonjour = document.getElementById('b1');
+                bonjour.addEventListener('click', alerte);
+            
+                function alerte(){
+                    alert('Bonjour');
+                }
+            });
+        </script>
+    </head>
+    
+    <body>
+        <h1>Titre principal</h1>
+        <button id='b1'>Cliquez moi</button>
+        <button id='b2'>Ajouter un paragraphe</button>
+        <script>
+            let ajouter = document.getElementById('b2');
+            ajouter.addEventListener('click', ajout);
+            function ajout(){
+                let para = document.createElement('p');
+                para.textContent = 'Paragraphe ajouté';
+                document.body.appendChild(para);
+            }
+        </script>
+    </body>
+</html>
