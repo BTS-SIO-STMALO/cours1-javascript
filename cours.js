@@ -137,13 +137,70 @@ prompt('ma variable varUn contient ' + varUn +
 
 // Les littéraux de gabarit vont me permettre de placer du texte et des variables ensemble sans avoir besoin d'utiliser l'opérateur de concaténation. Les variables sont directement interprétées, c'est à dire remplacer par leur valeur. 
 // Pour utiliser les littéraux de gabarit, je commence et termine ma chaîne de caractère par le signe d'accent grave
-
+/*
 prompt(`ma variable varUn contient ${varUn}
     ma variable varDeux contient ${varDeux}
     la somme de mes deux variables est égale à ${varUn + varDeux}
 `);
+*/
 
+/* les opérateurs de comparaison
+== permet de tester l'égalité entre deux variables sur les valeurs
+=== permet de tester l'égalité entre deux variables sur les valeurs et sur les types
+!= permet de tester la différence en valeur entre deux variables
+!== permet de tester la différence en valeur et en type entre deux variables
+< permet de tester si une valeur est strictement inférieure à une autre
+> permet de tester si une valeur est strictement supérieure à une autre
+<= permet de tester si une valeur est inférieure ou égale à une autre 
+>= permet de tester si une valeur est supérieure ou égale à une autre 
+*/
 
+// Les conditions en js
 
+let score = 1;
+let message = '';
+
+if (score > 3){
+    message = 'Bien joué';
+} else if (score === 2) {
+    message ='C\'est mal';
+} else {
+    message = 'A réviser';
+}
+console.log(message);
+
+// Les boucles 
+
+for (var k=0; k<10; k++){
+    console.log(k);
+}
+
+// attention ci-dessous c'est une boucle infinie
+/*
+let h = 1;
+while(h<5){
+    console.log(h);
+} 
+*/
+
+// Le switch existe aussi en js
+/* 
+exemple 
+let x = 15
+
+switch(x) {
+    case 5 :
+        decrire ce qu'il se passe dans ce cas
+    break;
+    case 10 :
+        décrire ce qu'il se passe ce cas 
+    break;
+    case 15 
+        décrire ce qu'il se passe dans ce cas 
+    break;
+    default : 
+        décrire ce qu'il se passe
+}
+*/
 
 
