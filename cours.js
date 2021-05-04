@@ -32,7 +32,7 @@ console.log(aurevoir);
 //console.log(aurevoir);
 
 // Explication de ce qu'est le DOM
-// Le DOM (Document Objet Model) est une représentation/une interface de mon document html sous forme d'objets dont je vais pouvoir exploiter via JS les propriétés et les méthodes. Plus d'informations sur le DOM ici : https://developer.mozilla.org/fr/docs/Web/API/Document_Object_Model/Introduction et ici https://developer.mozilla.org/fr/docs/Web/API/Document_Object_Model
+// Le DOM (Document Objet Model) est une représentation/une interface (de programmation) de mon document html sous forme d'objets dont je vais pouvoir exploiter via JS les propriétés et les méthodes. Plus d'informations sur le DOM ici : https://developer.mozilla.org/fr/docs/Web/API/Document_Object_Model/Introduction et ici https://developer.mozilla.org/fr/docs/Web/API/Document_Object_Model
 let salutation = document.getElementById('b1');
 let ajouter = document.getElementById('b2');
 
@@ -40,6 +40,31 @@ let ajouter = document.getElementById('b2');
 //https://developer.mozilla.org/fr/docs/Web/Events
 salutation.addEventListener('click', alerte);
 ajouter.addEventListener('click', ajout);
+
+/*
+addEventListener crée un écouteur d'événement. Un écouteur d'événement c'est une fonction qui va permettre d'indiquer au navigateur comment réagir à des événements d'un certain type (type que l'on spécifie).
+
+element.addEventListener(eventType, handler)
+
+- element c'est une référence vers un noeud du DOM
+- eventType est une chaîne de caractère décrivant l'événement.
+- handler c'est une fonction qui réalise l'action.
+*/
+
+// Ceci est une fonction anonyme
+var creationAnonyme = function(){
+    console.log('Salut je suis une fonction anonyme');
+}
+
+// Ceci est la même fonction que celle au dessus, sauf que je l'ai déclaré sensiblement différemment je l'ai nommée.
+function creationNommée(){
+    console.log('Salut je suis une fonction nommée');
+}
+
+creationNommée();
+creationAnonyme ;
+console.log(creationAnonyme);
+
 
 function alerte() {
     alert("Bonjour");
@@ -52,6 +77,73 @@ function ajout() {
 }
 
 console.log(typeof salutation);
+
+let age = 36;
+console.log(age);
+console.log(typeof age);
+
+// La concaténation en javascript
+let texteUn = "JS c'est fantastique";
+let phrase = texteUn + " et j\aime les sushis";
+console.log(phrase);
+
+// les tableaux en javascript 
+// Ils fonctionnent sur le même principe qu'en php mais en JS les tableaux associatifs n'existent pas. 
+var monTableau = [1, 3, "Salut", false];
+console.log(monTableau);
+console.log(monTableau[3]);
+
+// Les objets sont très utilisés en JS
+let person = {
+    age: 35,
+    prenom: "Mathilde",
+    nom: "Renversade",
+    taille: 160,
+    ville: 35400,
+}
+
+console.log(person);
+
+console.log(person.nom);
+
+/* Il existe évidément en JS les opérateurs arithmétiques
++ Addition
+- Soustraction
+* Multiplication
+/ Division
+% Le Modulo (reste d'une division euclidienne) 
+** Exponentielle (élévation à la puissance d'un nombre par un autre)
+*/
+
+/* Les opérateurs d'affectation
++= Additionne puis affecte le résultat
+-= Soustrait puis affecte le résultat
+*= Mutiplie puis affecte le résultat
+/= Divise puis affecte le résultat
+%= Calcule le module puis affecte le résultat
+*/
+
+/*
+Les littéraux de gabarit
+*/
+let varUn = 50 ;
+let varDeux = 25;
+
+/*
+prompt('ma variable varUn contient ' + varUn +
+'\n ma varialbe varDeux contient ' + varDeux + 
+'\n la somme de mes deux variables est égale à ' + (varUn + varDeux));
+ */
+
+// Les littéraux de gabarit vont me permettre de placer du texte et des variables ensemble sans avoir besoin d'utiliser l'opérateur de concaténation. Les variables sont directement interprétées, c'est à dire remplacer par leur valeur. 
+// Pour utiliser les littéraux de gabarit, je commence et termine ma chaîne de caractère par le signe d'accent grave
+
+prompt(`ma variable varUn contient ${varUn}
+    ma variable varDeux contient ${varDeux}
+    la somme de mes deux variables est égale à ${varUn + varDeux}
+`);
+
+
 
 
 
